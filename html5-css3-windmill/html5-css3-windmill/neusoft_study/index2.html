@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+</head>
+
+<body>
+<script type="text/javascript">
+    //添加方法
+    function addtr()
+    {
+        //var trid=0;
+        var tab=document.getElementById("signFrame");
+        //添加行
+        var newTR = tab.insertRow(tab.rows.length);
+        alert(tab.rows.length);
+        //trid++;
+
+        //获取序号=行索引
+        var  xuhao=newTR.rowIndex.toString();
+        alert(xuhao);
+        newTR.id = "tr" + xuhao;
+        //添加列:序号
+        var newNameTD=newTR.insertCell(0);
+        //添加列内容
+        newNameTD.innerHTML = xuhao;
+        //添加列:日期
+        var newNameTD=newTR.insertCell(1);
+        //添加列内容
+        newNameTD.innerHTML = "<input name='time" + xuhao + "' id='time" + xuhao + " size='19' onmouseover='this.style.backgroundColor=#6298E1;this.style.color=#000000;' onmouseout='this.style.backgroundColor=#6298E1;this.style.color=#000000;' />";
+
+        //添加列:方式
+        var newEmailTD=newTR.insertCell(2);
+        //添加列内容
+        newEmailTD.innerHTML = "<select style='width:70px;' name='way" + xuhao + "' id='way" + xuhao + "'><option  value='电话'>电话</option><option value='QQ'>QQ</option>   </select>";
+
+        //添加列:备注
+        var newTelTD=newTR.insertCell(3);
+        //添加列内容
+        newTelTD.innerHTML = "<input size='60' name='remark" + xuhao + "' id='remark" + xuhao + "' type='text'  onclick='showid(this)' />";
+
+        //添加列:删除按钮
+        var newDeleteTD=newTR.insertCell(4);
+        //添加列内容
+        newDeleteTD.innerHTML = "<div align='center' style='width:40px'><a href='javascript:;' onclick=\"deltr('tr" + xuhao + "')\">删除</a></div>";
+
+    }
+</script>
+
+<script type="text/javascript">
+    //删除其中一行
+    function deltr(trid)
+    {    alert(trid);
+        var tab=document.getElementById("signFrame");
+        var row=document.getElementById(trid);
+        var index=row.rowIndex;//rowIndex属性为tr的索引值，从0开始
+        tab.deleteRow(index);  //从table中删除
+
+        //重新排列序号，如果没有序号，这一步省略
+        var nextid;
+        for(i=index;i<tab.rows.length;i++){
+            tab.rows[i].cells[0].innerHTML = i.toString();
+            nextid=i+1;
+            remark=document.getElementByIdx_x("remark"+nextid);
+            remark.id="remark";
+        }
+    }
+    //删除其中一行
+    function deltr1() {
+        var trid="deviceInfo";
+        alert(trid);
+        var tab = document.getElementById("deviceInfos");
+        var row = document.getElementById(trid);
+        var index = row.rowIndex;//rowIndex属性为tr的索引值，从0开始
+        tab.deleteRow(index);  //从table中删除
+    }
+
+    function getDeviceInfoByDeviceNo(){
+var resourcesCode="1111";
+        if(resourcesCode=="")
+        {
+            alert("请您输入[终端串号]后点击[查询]");
+            return;
+        }else{
+            var result = "Iphone~7s~34524.4354";
+            alert("result="+result);
+            var resSplit = result.split("~");
+            console.log(result);
+            if(resSplit.length==3){
+                var tab=document.getElementById("deviceInfos");
+                alert(tab.rows.length);
+//                var row=document.getElementById("deviceInfo");
+//                alert(row);
+                //var index=row.rowIndex;//rowIndex属性为tr的索引值，从0开始
+//                tab.deleteRow(1);  //从table中删除
+
+                if(tab.rows.length>1){
+                    deltr1();
+                }
+                var newTR = tab.insertRow(tab.rows.length); //添加行
+                newTR.id = "deviceInfo";
+                var newPPTD=newTR.insertCell(0);
+                newPPTD.innerHTML = "终端品牌";
+                newPPTD.className="formLabel";
+                var newPPvalueTD=newTR.insertCell(1);
+                newPPvalueTD.innerHTML = resSplit[0];
+                newPPvalueTD.className="formField";
+                var newXHTD=newTR.insertCell(2);
+                newXHTD.innerHTML = "终端型号";
+                newXHTD.className="formLabel";
+                var newXHvalueTD=newTR.insertCell(3);
+                newXHvalueTD.innerHTML = resSplit[1];
+                newXHvalueTD.className="formField";
+                var newJGTD=newTR.insertCell(4);
+                newJGTD.innerHTML = "终端价格";
+                newJGTD.className="formLabel";
+                var newJGTD=newTR.insertCell(5);
+                newJGTD.innerHTML =resSplit[2];
+                newJGTD.className="formField";
+            }else{
+                alert("效验失败，请输入正确的终端串号");
+            }
+        }
+
+    }
+</script>
+
+
+<script type="text/javascript">
+    function showid(txt)
+    {alert(txt.id);
+    }
+
+</script>
+<body>
+<input type="button" value="添加" onclick="addtr()" />
+<input type="button" value="删除" onclick="deltr1()" />
+
+<table id="deviceInfos"  border="1px" width="100%" border="0" cellpadding="2" cellspacing="2" class="formTableCore" style="">
+    <tr>
+        <td class="formLabel" style="width: 10%;">终端串号</td>
+        <td class="formField" style="width: 20%;">sssss</td>
+        <td class="formField" colspan="4"><button class="formButton" name="" onclick="getDeviceInfoByDeviceNo()">校验</button></td>
+    </tr>
+
+</table>
+<table border="1px" width="70%" id="signFrame">
+    <tr id="trHeader">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr id="trHeader">
+        <td width="50px">序号</td>
+        <td width="170px">时间</td>
+        <td width="100px">方式</td>
+        <td>备注</td>
+        <td width="80px">操作</td>
+    </tr>
+    <tr id="trHeader">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr id="trHeader">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr id="trHeader">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr id="trHeader">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>

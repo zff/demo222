@@ -1,0 +1,93 @@
+div {
+    width:100px;
+    height:100px;
+    background: #1be9ff;
+    animation:myfirst 5s linear 2s infinite alternate;
+    -moz-animation:myfirst 5s; /* Firefox */
+    -webkit-animation:myfirst 5s; /* Safari and Chrome */
+    -o-animation:myfirst 5s; /* Opera */
+}
+
+@keyframes myfirst
+{
+    0%   {background: #2090ff;}
+    25%  {background: #8fc3ff;}
+    50%  {background: #26a9ff;}
+    100% {background:#2090ff;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    0%   {background: #2090ff;}
+    25%  {background: #8fc3ff;}
+    50%  {background: #26a9ff;}
+    100% {background:#2090ff;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    0%   {background: #2090ff;}
+    25%  {background: #8fc3ff;}
+    50%  {background: #26a9ff;}
+    100% {background:#2090ff;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+    0%   {background: #2090ff;}
+    25%  {background: #8fc3ff;}
+    50%  {background: #26a9ff;}
+    100% {background:#2090ff;}
+}
+
+
+/*div*/
+/*{*/
+    /*width:100px;*/
+    /*height:100px;*/
+    /*background:red;*/
+    /*position:relative;*/
+    /*animation:myfirst1 5s linear 2s infinite alternate;*/
+    /* Firefox: */
+    /*-moz-animation:myfirst1 5s linear 2s infinite alternate;*/
+    /* Safari and Chrome: */
+    /*-webkit-animation:myfirst1 5s linear 2s infinite alternate;*/
+    /* Opera: */
+    /*-o-animation:myfirst1 5s linear 2s infinite alternate;*/
+/*}*/
+
+/*@keyframes myfirst1*/
+/*{*/
+    /*0%   {background:red; left:0px; top:0px;}*/
+    /*25%  {background:yellow; left:200px; top:0px;}*/
+    /*50%  {background:blue; left:200px; top:200px;}*/
+    /*75%  {background:green; left:0px; top:200px;}*/
+    /*100% {background:red; left:0px; top:0px;}*/
+/*}*/
+
+/*@-moz-keyframes myfirst1 *//* Firefox */
+/*{*/
+    /*0%   {background:red; left:0px; top:0px;}*/
+    /*25%  {background:yellow; left:200px; top:0px;}*/
+    /*50%  {background:blue; left:200px; top:200px;}*/
+    /*75%  {background:green; left:0px; top:200px;}*/
+    /*100% {background:red; left:0px; top:0px;}*/
+/*}*/
+
+/*@-webkit-keyframes myfirst1 *//* Safari and Chrome */
+/*{*/
+    /*0%   {background:red; left:0px; top:0px;}*/
+    /*25%  {background:yellow; left:200px; top:0px;}*/
+    /*50%  {background:blue; left:200px; top:200px;}*/
+    /*75%  {background:green; left:0px; top:200px;}*/
+    /*100% {background:red; left:0px; top:0px;}*/
+/*}*/
+
+/*@-o-keyframes myfirst1 *//* Opera */
+/*{*/
+    /*0%   {background:red; left:0px; top:0px;}*/
+    /*25%  {background:yellow; left:200px; top:0px;}*/
+    /*50%  {background:blue; left:200px; top:200px;}*/
+    /*75%  {background:green; left:0px; top:200px;}*/
+    /*100% {background:red; left:0px; top:0px;}*/
+/*}*/

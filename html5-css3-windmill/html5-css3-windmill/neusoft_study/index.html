@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="index.js" language="javascript"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="3">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+                    <td class="tableTitleLeft2" >&#160;</td>
+                    <td class="tableTitle2">入网当月资费为</td>
+                    <td class="tableTitleRight2" >&#160;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="formTableL" align="center">&#160;</td>
+        <td class="formTableC"  align="center">
+            <table width="100%" border="0" cellpadding="2" cellspacing="2" class="formTableCore" style="">
+                <tr>
+                    <td class="formField"><input class="radio" type="radio" value="1" checked name="netWorkPrice"/>套餐包外资费</td>
+                    <td class="formField"><input class="radio" type="radio" value="2" name="netWorkPrice"/>全月套餐</td>
+                    <td class="formField"><input class="radio" type="radio" value="3" name="netWorkPrice"/>套餐减半</td>
+                </tr>
+            </table>
+        </td>
+        <td class="formTableR"  align="center">&#160;</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+                    <td class="tableTitleLeft2" >&#160;</td>
+                    <td class="tableTitle2">活动信息</td>
+                    <td class="tableTitleRight2" >&#160;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="formTableL"  align="center">&#160;</td>
+        <td class="formTableC"  align="center">
+            <table width="100%" border="0" cellpadding="2" cellspacing="2" class="formTableCore" style="">
+                <tr>
+                    <td class="formField"><input class="radio" type="radio" checked value="1" name="joinPlan" onchange="changeJoinPlan()"/>参加合约计划</td>
+                    <td class="formField"><input class="radio" type="radio" value="2" name="joinPlan" onchange="changeJoinPlan()"/>不参加合约计划</td>
+                </tr>
+            </table>
+        </td>
+        <td class="formTableR">&#160;</td>
+    </tr>
+    <tr id="joinActivityList">
+        <td colspan="3">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+                    <td class="tableTitleLeft2" >&#160;</td>
+                    <td class="tableTitle2">活动列表</td>
+                    <td class="tableTitleRight2" >&#160;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr id="joinActivityType">
+        <td class="formTableL" >&#160;</td>
+        <td class="formTableC" >
+            <table width="100%" border="0" cellpadding="2" cellspacing="2" class="formTableCore" style="">
+                <tr>
+                    <td class="formLabel" style="width:10%;">活动类型：</td>
+                    <td class="formField" style="width:20%;"><select><option>activityType</option><option>666</option></select></td>
+                    <td class="formLabel" style="width:10%;">担保类型：</td>
+                    <td class="formField" style="width:20%;"><select><option>activityCont</option><option>244222</option></select></td>
+                    <td class="formLabel" style="width:10%;">可选活动：</td>
+                    <td class="formField" style="width:20%;"><select><option>3333333</option><option>22232</option></select></td>
+                </tr>
+            </table>
+        </td>
+        <td class="formTableR" >&#160;</td>
+    </tr>
+    <tr id="resourcesCodeInfo">
+        <td colspan="3">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+                    <td class="tableTitleLeft2" >&#160;</td>
+                    <td class="tableTitle2">终端信息</td>
+                    <td class="tableTitleRight2" >&#160;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr id="resourcesCodeList">
+        <td class="formTableL" >&#160;</td>
+        <td class="formTableC" >
+            <table width="100%" border="0" cellpadding="2" cellspacing="2" class="formTableCore" style="">
+                <tr>
+                    <td class="formLabel" style="width:10%;">终端串号：</td>
+                    <td class="formField" style="width:20%;"><unieap:input tcname="Text" name="resourcesCode" id="resourcesCode" value="" maxlength="32" prompt="终端串号" isnullable="true" /></td>
+                    <td class="formField" colspan="4"><button class="formButton" name="" onclick="">校验</button></td>
+                </tr>
+                <tr>
+                    <td class="formLabel" style="width:10%;">终端品牌：</td><td class="formField" style="width:20%;">斐讯</td>
+                    <td class="formLabel" style="width:10%;">终端型号：</td><td class="formField" style="width:20%;">斐讯K390黑</td>
+                    <td class="formLabel" style="width:10%;">终端价格：</td><td class="formField" style="width:20%;">499.00元</td>
+                </tr>
+            </table>
+        </td>
+        <td class="formTableR" >&#160;</td>
+    </tr>
+
+</table>
+</body>
+</html>

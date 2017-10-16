@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link rel="stylesheet" href="swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="swiper/css/animate.min.css">
+    <link rel="stylesheet" href="swiper/css/test.css">
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .pre-wrap {
+            width: 24px;
+            height: 14px;
+            position: relative;
+            -webkit-animation: start 1.5s infinite ease-in-out;
+            -moz-animation: start 1.5s infinite ease-in-out;
+            animation: start 1.5s infinite ease-in-out;
+        }
+
+        .bg-page{
+            background-size: 100% 100%;
+        }
+
+        #logoFont{
+            animation:flash 3.5s infinite;
+            animation-delay:5s;
+        }
+    </style>
+</head>
+<body >
+<div id="audio_btn" class="off video_exist rotate" style="display: block;" onclick="toggleAudioPlay()">
+    <audio loop="" src="海阔天空.mp3" id="media" autoplay="" preload=""></audio>
+</div>
+<section class="u-arrow-bottom" >
+    <div class="pre-wrap">
+        <div class="pre-box1">
+            <div class="pre1"></div>
+        </div>
+        <div class="pre-box2">
+            <div class="pre2"></div>
+        </div>
+    </div>
+</section>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"  >
+            <div class="bg-page ani" swiper-animate-effect="rotateIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s" style="width: 100%;height: 100%; background-color: #111111;background-image: url('temp/o_1afogp18k18etvijr8r1m2a1d2f5v.jpg')">
+                <div id="logoFont" style="position: absolute;bottom: 50px;left: 50%;width: 116px;height:38px;margin-left: -52px;line-height: 2px">
+                    <h2 class="ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s" style="color: #fff;float: left">P</h2>
+                    <h2 class="ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s" style="margin-left: 3px;color: #fff;float: left">O</h2>
+                    <h2 class="ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.5s" style="margin-left: 3px;color: #fff;float: left">W</h2>
+                    <h2 class="ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s" style="margin-left: 3px;color: #fff;float: left">E</h2>
+                    <h2 class="ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="3.5s" style="margin-left: 3px;color: #fff;float: left">R</h2>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" >
+            <div class="bg-page" style="width: 100%;height: 100%;background-image: url('temp/o_1afopj4fjeqm417156v1o9ov4r3f.png')"> </div>
+            <div class="bg-page ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.5s" style="width: 100%;height: 100%;background-image: url('temp/o_1ag05out555vqpjm5p1do49ts9.png');position: absolute;top: 0;left: 0"></div>
+            <div class="bg-page ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1.8s" swiper-animate-delay="0.6s" style="width: 100%;height: 100%;background-image: url('temp/o_1afog0hqk1it531t1pho12de6mc2j.png');position: absolute;top: 0;left: 0"></div>
+            <div class="bg-page ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="2.5s" swiper-animate-delay="0.5s" style="width: 100%;height: 100%;background-image: url('temp/c55fecb6-599d-4dcf-9c9b-9b2b785d9126.png');position: absolute;top: 0;left: 0"></div>
+            <div class="bg-page ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.5s" style="width: 100%;height: 100%;background-image: url('temp/o_1afoejidb1j7cubd15ta1nf71lrg11.png');position: absolute;top: 0;left: 0"></div>
+        </div>
+        <div class="swiper-slide" >
+            <img  src="temp/o_1afopbb6t1m1fkdh1p3mmqhnb1h.png" style="width: 100%;height: 100%;position: absolute;top:0;left:0" />
+            <img class="ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" src="temp/o_1afosl9pl14031dt11cvb1bqe18g43s.png" style="width: 100%;height: 100%;position: absolute;top:0;left:0" />
+            <img class="ani" swiper-animate-effect="bounce" swiper-animate-duration="1s" swiper-animate-delay="0.8s" src="temp/o_1afvnf3smmm5omc1s57e9q5c1l.png" style="width: 100%;height: 100%;position: absolute;top:0;left:0" />
+            <img class="ani"   swiper-animate-effect="flash" swiper-animate-duration="1s" swiper-animate-delay="0.8s" src="temp/bb9ea9b6-e67b-4a4b-8f99-c812a04b36a1.png" style="width: 100%;height: 100%;position: absolute;top:0;left:0;z-index: 999" />
+            <img class="ani" swiper-animate-effect="swing" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s" src="temp/o_1afvnngg61m091svu67t1o8o1rfa9.png" style="width: 100%;height: 100%;position: absolute;top:0;left:0" />
+            <div style="width: 40%; height: 30px;position: absolute;top:75%;left: 30%;z-index: 999" onclick="gotoSignUpApply()"></div>
+        </div>
+        <!--<div class="swiper-slide" style="background-color: #C4D8C6">-->
+
+        <!--</div>-->
+
+    </div>
+    <!-- Add Pagination -->
+    <!--<div class="swiper-pagination"></div>-->
+</div>
+<script src="swiper/js/swiper.min.js"></script>
+<script src="swiper/js/swiper.animate1.0.2.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+     //   pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true,
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });
+   function toggleAudioPlay(){
+        var audio = document.getElementById('media');
+        if(audio!==null){
+            //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+            console.log(audio.paused,document.getElementById('audio_btn').className);
+            if(audio.paused)                     {
+                audio.play();//audio.play();// 这个就是播放
+                document.getElementById('audio_btn').className = 'off video_exist rotate';
+            }else{
+                audio.pause();// 这个就是暂停
+                document.getElementById('audio_btn').className = 'off video_exist';
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="css/ionic.min.css" rel="stylesheet" >
+</head>
+<body ng-app="app">
+<ion-nav-view></ion-nav-view>
+
+<script id="templates/event.html" type="text/ng-template">
+    <ion-nav-view name="event-list"></ion-nav-view>
+</script>
+
+<script id="templates/event-list.html" type="text/ng-template">
+    <ion-view>
+        <!--<div class="bar bar-header bar-light">-->
+            <!--<h1 class="title">bar-light</h1>-->
+        <!--</div>-->
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" placeholder="Search">
+            </label>
+            <button class="button button-clear">
+                <i class=" ion-close-circled"></i>
+            </button>
+        </div>
+        <div class="tabs tabs-icon-top">
+            <a class="tab-item">
+                <i class="icon ion-flag"></i>
+                报名中
+            </a>
+            <a class="tab-item">
+                <i class="icon ion-locked"></i>
+                报名截止
+            </a>
+            <a class="tab-item">
+                <i class="icon ion-clipboard"></i>
+                历史活动
+            </a>
+        </div>
+        <ion-content>
+        <div class="content has-header">
+            <div class="list card">
+
+                <div class="item item-avatar">
+                    <!--<img src="mcfly.jpg">-->
+                    <i class="icon ion-flag" style="position: absolute;top:16px;left:16px;font-size:40px "></i>
+                    <h2 style="font-size: 18px">
+                        <a  href="#/event/event-detail">春游活动</a>
+                    </h2>
+                    <p>2015-04-01 ~ 2015-04-28</p>
+                </div>
+
+                <div class="item item-body" >
+                    <a href="#/event/event-detail">
+                        <img class="full-image" src="images/test.png" style="height: 120px;">
+                    </a>
+
+                    <p>
+                        This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                        the content is from a card-body consisting of an image and paragraph text. The footer
+                        consists of tabs, icons aligned left, within the card-footer.
+                    </p>
+                    <p>
+                        <a class="subdued">1 赞</a>
+                        <a  class="subdued">5 评论</a>
+                    </p>
+                </div>
+              </div>
+            </div>
+        </ion-content>
+
+    </ion-view>
+</script>
+
+<script id="templates/event-detail.html" type="text/ng-template">
+    <ion-view>
+        <ion-nav-bar>
+            <ion-nav-back-button class="button-clear">
+                <i class="ion-arrow-left-c"></i>
+            </ion-nav-back-button>
+        </ion-nav-bar>
+        <div class="bar bar-header bar-light">
+            <h1 class="title">春游活动</h1>
+        </div>
+        <ion-content>
+            <div class="list card">
+                <div class="item item-body">
+                    <img class="full-image" src="images/test.png">
+                    <p>
+                        This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                        the content is from a card-body consisting of an image and paragraph text. The footer
+                        consists of tabs, icons aligned left, within the card-footer.
+                    </p>
+                    <p>
+                        <a href="#" class="subdued">
+                            <li class="ion-ios-star-outline" data-pack="default"  style="display: inline-block;font-size:18px"></li>
+                        </a>
+                        <a href="#" class="subdued">
+                            <li class="ion-ios-chatbubble" data-pack="ios" data-tags="talk" style="display: inline-block;font-size:18px"></li>
+                        </a>
+                    </p>
+
+                </div>
+                <a href="#" class="item item-icon-left" style="padding-left: 16px">
+                   活动日期: 2015-04-01 ~ 2015-04-28
+                </a>
+
+                <a href="#" class="item item-icon-left"  style="padding-left: 16px">
+                    报名截止:  2015-04-25
+                </a>
+                <a href="#" class="item item-icon-left"  style="padding-left: 16px">
+                    活动城市:  辽宁省 - 大连市
+                </a>
+                <a href="#" class="item item-icon-left"  style="padding-left: 16px">
+                    已报人数: 9
+                </a>
+            </div>
+            <div class="content padding has-header">
+                <button class="button button-block button-positive">
+                    我要报名
+                </button>
+
+            </div>
+
+        </ion-content>
+
+
+    </ion-view>
+</script>
+
+</div>
+
+<script src="js/ionic.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
